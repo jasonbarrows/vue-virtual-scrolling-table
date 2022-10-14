@@ -57,7 +57,7 @@ onUnmounted(() => window.removeEventListener('resize', handleResize))
   <div class="overflow-auto" :style="{height: rootHeight + 'px'}" @scroll="handleScroll">
     <div class="overflow-x-auto" :style="{height: dataHeight + 'px'}" @scroll="linkUpHeaders">
       <table class="table-fixed border-separate border-spacing-0" :style="{ transform: 'translate(0, ' + offsetY + 'px)' }">
-        <tbody :style="{ height: rootHeight + 'px' }">
+        <tbody>
           <tr class="h-10" v-for="(row, i) in visibleItems" :key="i">
             <td class="min-w-[112px] max-w-[112px] w-28 font-bold bg-white border-l border-r border-b border-gray-400 sticky left-0">
                 Row {{ row.id }}
